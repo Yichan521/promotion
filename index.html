@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ai助力推广普通话网站</title>
+    <link rel="stylesheet" href="css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">ai助力推广普通话网站</div>
+      <ul class="nav-links">
+        <li><a href="#first">首页</a></li>
+        <li><a href="#output">作品</a></li>
+        <li><a href="#members">成员</a></li>
+        <li><a href="#footer">联系我们</a></li>
+      </ul>
+    </nav>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").slice(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    </script>
+    <!-- 导航栏 -->
+    <div class="parent-box" id="first">
+      <div class="bg_box">
+        <img src="images/background.png" />
+      </div>
+      <div class="child-box">
+        <div id="typewriter" style="font-size: 36px; font-weight: bolder"></div>
+        <!-- 打字机动画模拟 -->
+        <script>
+          // 定义要展示的文本
+          const text = "让AIGC的魔法，惠及到推普工作中去。";
+          let index = 0;
+
+          // 获取要显示文字的容器
+          const typewriterDiv = document.getElementById("typewriter");
+
+          // 定义打字速度
+          const typingSpeed = 120; // 每个字符的显示时间间隔（毫秒）
+
+          function type() {
+            // 当index小于文字长度时，继续添加字符
+            if (index < text.length) {
+              // 获取当前字符并追加到容器中
+              typewriterDiv.innerHTML += text.charAt(index);
+              index++;
+              // 设置下一次调用打字的时间
+              setTimeout(type, typingSpeed);
+            } else {
+              // 当打字结束时，停顿后可以重置动画或执行其他操作
+              setTimeout(() => {
+                typewriterDiv.innerHTML = ""; // 清空文本
+                index = 0; // 重置索引
+                setTimeout(type, typingSpeed); // 重新开始
+              }, 20000); // 停顿2秒后重置
+            }
+          }
+
+          // 调用打字函数
+          type();
+        </script>
+      </div>
+      <!-- <div class="child-box">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="center1">
+          <div class="shell1">
+            <div class="content1">
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <!--网页头部-->
+    <div class="introduction">
+      <br />
+      <br />
+      <h2 style="text-align: left; margin-left: 68px">团队介绍</h2>
+      <br />
+      <p style="text-align: left; margin-left: 68px">
+        该项目团队由中国传媒大学播音主持艺术学院和数据科学与智能媒体学院联合研发，致力于推进普通话的普及和推广。
+      </p>
+      <p style="text-align: left; margin-left: 68px">
+        项目由中国传媒大学播音主持艺术学院教师（国家级普通话测试员）提供专业的普通话指导，数据科学与智能媒体学院教师提供技术指导，并获得了字节coze技术团队的大力支持。
+      </p>
+      <p style="text-align: left; margin-left: 68px">
+        项目通过AI技术（AIGC），集成搜索与生成功能，旨在为用户提供全面的普通话学习和推广平台。
+      </p>
+      <p style="text-align: left; margin-left: 68px">
+        项目主要包括四个维度：普通话理论搜索、推广普通话数据调查助手、推普小游戏和典耀中华优秀传统文化推广。
+      </p>
+      <p style="text-align: left; margin-left: 68px">
+        我们以国家推广普通话的精神为引领，旨在通过AI技术，服务于更多推普团队，推动普通话在全国范围内的普及与应用，进而弘扬中华文化的博大精深。
+      </p>
+      <p style="text-align: left; margin-left: 68px">
+        目标是打造一个全面、互动、有趣的普通话学习和推广平台，为全国普通话推广事业贡献力量。
+      </p>
+      <br />
+      <br />
+    </div>
+    <!--团队介绍-->
+    <div class="about">
+      <div class="about_bg_box">
+        <img src="images/背景4.jpg" />
+      </div>
+      <h2 style="align-items: center">a i 工 具</h2>
+    </div>
+    <!--研究方向-->
+    <section class="service_section layout_padding">
+      <div class="service_container">
+        <div id="output"></div>
+        <div class="container">
+          <div class="heading_container"></div>
+          <div class="row">
+            <div class="col-md-6 col-xl-4">
+              <div class="box" style="flex: none">
+                <div class="img-box">
+                  <img src="images/s1.png" alt="" />
+                </div>
+                <div class="detail-box" style="width: 1000px">
+                  <h5>发音知识助手</h5>
+                  <ul style="font-size: large"></ul>
+                  <a href="/Q＆A_bot/Q＆A_bot.html">点击使用</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="box" style="flex: none">
+                <div class="img-box">
+                  <img src="images/s4.png" alt="" />
+                </div>
+                <div class="detail-box" style="width: 1000px">
+                  <h5>推普趣味游戏</h5>
+                  <ul style="font-size: large"></ul>
+                  <a href="/game/game.html">点击使用</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="box" style="flex: none">
+                <div class="img-box">
+                  <img src="images/s5.png" alt="" />
+                </div>
+                <div class="detail-box" style="width: 1000px">
+                  <h5>问卷调查助手</h5>
+                  <ul style="font-size: large"></ul>
+                  <a href="../questionary/questionary.html">点击使用</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="box" style="flex: none">
+                <div class="img-box">
+                  <img src="images/s6.png" alt="" />
+                </div>
+                <div class="detail-box" style="width: 1000px">
+                  <h5>典耀中华</h5>
+                  <ul style="font-size: large"></ul>
+                  <a href="/Chinese_works/Chinese_works.html">点击使用</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--产出成果-->
+    <div>
+      <!-- <div class="team" id="members">
+        <div class="team_bg_box">
+          <img src="images/轮播1.jpg" />
+        </div>
+        <h2>指 导 教 师</h2>
+      </div> -->
+      <div class="w shell" id="members">
+        <div class="team-container">
+          <div class="teacher-box">
+            <div class="teacher-title">指导教师</div>
+            <div class="teacher-info">
+              <div class="teacher-photo-container">
+                <div class="teacher-photo">
+                  <img src="images/隋欣益.png" alt="隋欣益" />
+                </div>
+                <div class="teacher-card">
+                  <img
+                    src="images/隋欣益.png"
+                    alt="隋欣益"
+                    class="card-photo"
+                  />
+                  <div class="card-info">
+                    <div class="card-name">隋欣益</div>
+                    <div class="card-bio">
+                      满族，艺术学硕士，讲师。北京电视艺术家协会会员，指导老师，负责项目统筹规划。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="teacher-bio">
+                满族，艺术学硕士，讲师。北京电视艺术家协会会员，指导老师，负责项目统筹规划。
+              </div>
+            </div>
+            <br />
+            <div class="teacher-info">
+              <div class="teacher-photo-container">
+                <div class="teacher-photo">
+                  <img src="images/赵晴.png" alt="赵晴" />
+                </div>
+                <div class="teacher-card">
+                  <img src="images/赵晴.png" alt="赵晴" class="card-photo" />
+                  <div class="card-info">
+                    <div class="card-name">赵晴</div>
+                    <div class="card-bio">
+                      中国传媒大学数据科学与智能媒体学院教师，负责系统开发技术指导。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="teacher-bio">
+                中国传媒大学数据科学与智能媒体学院教师，负责系统开发技术指导。
+              </div>
+            </div>
+            <br />
+            <div class="teacher-info">
+              <div class="teacher-photo-container">
+                <div class="teacher-photo">
+                  <img src="images/袁璐.png" alt="袁璐" />
+                </div>
+                <div class="teacher-card">
+                  <img src="images/袁璐.png" alt="袁璐" class="card-photo" />
+                  <div class="card-info">
+                    <div class="card-name">袁璐</div>
+                    <div class="card-bio">
+                      中国传媒大学数据科学与智能媒体学院教师，负责总体技术指导。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="teacher-bio">
+                中国传媒大学数据科学与智能媒体学院教师，负责总体技术指导。
+              </div>
+            </div>
+          </div>
+          <div class="students-box">
+            <div class="students-title">团队成员</div>
+            <div class="students-info">
+              <div class="teacher-photo-container">
+                <div class="teacher-photo">
+                  <img src="images/范中华.png" alt="范中华" />
+                </div>
+                <div class="teacher-card">
+                  <img
+                    src="images/范中华.png"
+                    alt="范中华"
+                    class="card-photo"
+                  />
+                  <div class="card-info">
+                    <div class="card-name">范中华</div>
+                    <div class="card-bio">
+                      中国传媒大学播音与主持艺术专业，项目总体负责人。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="students-bio">
+                中国传媒大学播音与主持艺术专业，项目总体负责人。
+              </div>
+            </div>
+            <br />
+            <div class="students-info">
+              <div class="teacher-photo-container">
+                <div class="teacher-photo">
+                  <img src="images/王晗羽.png" alt="王晗羽" />
+                </div>
+                <div class="teacher-card">
+                  <img
+                    src="images/王晗羽.png"
+                    alt="王晗羽"
+                    class="card-photo"
+                  />
+                  <div class="card-info">
+                    <div class="card-name">王晗羽</div>
+                    <div class="card-bio">
+                      中国传媒大学播音与主持艺术专业，负责内容策划与编辑。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="students-bio">
+                中国传媒大学播音与主持艺术专业，负责内容策划与编辑。
+              </div>
+            </div>
+            <br />
+            <div class="students-info">
+              <div class="teacher-photo-container">
+                <div class="teacher-photo">
+                  <img src="images/闻学兵.png" alt="闻学兵" />
+                </div>
+                <div class="teacher-card">
+                  <img
+                    src="images/闻学兵.png"
+                    alt="闻学兵"
+                    class="card-photo"
+                  />
+                  <div class="card-info">
+                    <div class="card-name">闻学兵</div>
+                    <div class="card-bio">
+                      中国传媒大学数据科学与大数据技术专业，负责系统开发工作。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="students-bio">
+                中国传媒大学数据科学与大数据技术专业，负责系统开发工作。
+              </div>
+            </div>
+          </div>
+          <div class="students-box">
+            <div class="students-info">
+              <div class="teacher-photo-container">
+                <div class="teacher-photo">
+                  <img src="images/龙美洁.png" alt="龙美洁" />
+                </div>
+                <div class="teacher-card">
+                  <img
+                    src="images/龙美洁.png"
+                    alt="龙美洁"
+                    class="card-photo"
+                  />
+                  <div class="card-info">
+                    <div class="card-name">龙美洁</div>
+                    <div class="card-bio">
+                      中国传媒大学广告学专业，负责ui设计和界面美化工作。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="students-bio">
+                中国传媒大学广告学专业，负责ui设计和界面美化工作。
+              </div>
+            </div>
+            <br />
+            <div class="students-info">
+              <div class="teacher-photo-container">
+                <div class="teacher-photo">
+                  <img src="images/宋诗琳.png" alt="宋诗琳" />
+                </div>
+                <div class="teacher-card">
+                  <img
+                    src="images/宋诗琳.png"
+                    alt="宋诗琳"
+                    class="card-photo"
+                  />
+                  <div class="card-info">
+                    <div class="card-name">宋诗琳</div>
+                    <div class="card-bio">
+                      中国传媒大学计算机科学与技术专业，负责ai
+                      bot的建立与调试、参与协作系统开发。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="students-bio">
+                中国传媒大学计算机科学与技术专业，负责ai
+                bot的建立与调试、参与协作系统开发。
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="box">
+          <div class="images">
+            <img src="images/隋欣益.png" />
+          </div>
+          <div class="content">
+            <h2>隋欣益</h2>
+            <p>
+              满族，艺术学硕士，讲师。北京电视艺术家协会会员，指导老师，负责项目统筹规划。
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img src="images/袁璐.jpg" />
+          </div>
+          <div class="content">
+            <h2>袁璐</h2>
+            <p>中国传媒大学数据科学与智能媒体学院教师，负责总体技术指导。</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img src="images/赵晴.png" />
+          </div>
+          <div class="content">
+            <h2>赵晴</h2>
+            <p>
+              中国传媒大学数据科学与智能媒体学院教师，负责系统开发技术指导。
+            </p>
+          </div>
+        </div> -->
+      </div>
+      <!-- <div class="team">
+        <div class="team_bg_box">
+          <img src="images/轮播1.jpg" />
+        </div>
+        <h2>团 队 成 员</h2>
+      </div> -->
+      <!-- <div class="w shell">
+        <div class="box">
+          <div class="images">
+            <img src="images/范中华.png" />
+          </div>
+          <div class="content">
+            <h2>范中华</h2>
+            <p>中国传媒大学播音与主持艺术专业，项目总体负责人。</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img src="images/王晗羽.png" />
+          </div>
+          <div class="content">
+            <h2>王晗羽</h2>
+            <p>中国传媒大学播音与主持艺术专业，负责内容策划与编辑。</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img src="images/闻学兵.png" />
+          </div>
+          <div class="content">
+            <h2>闻学兵</h2>
+            <p>中国传媒大学数据科学与大数据技术专业，负责系统开发工作。</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img src="images/龙美洁.png" />
+          </div>
+          <div class="content">
+            <h2>龙美洁</h2>
+            <p>中国传媒大学广告学专业，负责ui设计和界面美化工作。</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img src="images/宋诗琳.png" />
+          </div>
+          <div class="content">
+            <h2>宋诗琳</h2>
+            <p>
+              中国传媒大学计算机科学与技术专业，负责ai
+              bot的建立与调试、参与协作系统开发。
+            </p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div id="footer">
+      <h2 class="clearfix"></h2>
+      <h2 class="float-left" style="text-align: left; color: black">
+        ai助力推普项目组
+      </h2>
+      <div class="middle" style="color: black">
+        <p>联系我们</p>
+        <p>手机号：19535688481</p>
+        <p>E-mail:1421706189@qq.com</p>
+      </div>
+    </div>
+  </body>
+</html>

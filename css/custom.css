@@ -1,0 +1,879 @@
+body {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: 60px;
+  background-color: #f9f7f7;
+  padding: 0%;
+  margin: 0;
+  /* background-image:url(images/背景1.jpg); */
+}
+/* 清除浮动 */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 设置浮动 */
+.float-left {
+  float: left;
+}
+
+/* 将内部文本水平居中对齐 */
+#footer {
+  display: flex;
+  align-items: center;
+  background-color: rgb(230, 228, 220);
+  width: 100%;
+}
+
+#footer .middle {
+  text-align: center;
+  flex-grow: 1; /* 让中间内容占据剩余空间 */
+}
+
+.about {
+  height: 250px;
+  background-color: rgba(238, 247, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team {
+  height: 250px;
+  background-color: rgba(238, 247, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .about_bg_box {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.team .team_bg_box {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.about .about_bg_box img {
+  width: 100%;
+}
+
+.team .team_bg_box img {
+  width: 100%;
+}
+
+.parent-box {
+  height: 100%;
+  width: 100%; /* 网页等宽 */
+  background-color: rgba(238, 247, 255, 0.5);
+}
+
+.parent-box .bg_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.parent-box .bg_box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+  .col-xl-4 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.col-md-6 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1190px;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.heading_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
+.row .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 45px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.service_section {
+  width: 100%;
+}
+
+.box .img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 90px;
+  min-width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  background-color: rgb(230, 228, 220);
+  margin-right: -45px;
+  position: relative;
+}
+
+.box .img-box img {
+  width: 50px;
+  height: 50px;
+}
+
+.row .box .detail-box a {
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+}
+
+.row .box .detail-box a:hover {
+  color: #f9f7f7;
+  text-decoration: none;
+}
+
+h5 {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  display: block;
+  font-size: 1.25em;
+  /* margin-block-start: 1.67em;
+  margin-block-end: 1.67em; */
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+@media (min-width: 768px) {
+  .col-md-6 {
+    /* -ms-flex: 0 0 50%; */
+    /* flex: 0 0 50%; */
+    max-width: 100%;
+  }
+}
+
+.box .detail-box {
+  background-color: rgba(229, 226, 226, 0.477);
+  margin-top: 25px;
+  padding: 25px 15px 15px 55px;
+  border-radius: 10px;
+  width: 600px;
+}
+
+.service_section {
+  position: relative;
+}
+
+.layout_padding {
+  padding: 90px 0;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  /* justify-content:center; */
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* @media (min-width: 1200px) {
+  #output {
+      max-width: 1190px;
+  }
+} */
+
+#output {
+  /* display: flex; */
+  height: auto;
+  background-color: #f9f7f7;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 50px;
+}
+
+/* 子盒子 */
+.child-box {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  justify-content: center; /* 水平居中对齐 */
+  width: 100%; /* 使子盒子占满父盒子的宽度 */
+  height: 100%;
+  background-color: rgba(238, 247, 255, 0.5);
+}
+
+#typewriter {
+  font-family: "Arial Black", monospace; /* 打字机风格字体 */
+  font-size: 24px;
+  white-space: nowrap; /* 防止文字自动换行 */
+  border-right: 2px solid black; /* 打字机光标 */
+  width: fit-content;
+  overflow: hidden; /* 隐藏超出边界的内容 */
+  display: inline-block;
+}
+
+@keyframes blink {
+  0% {
+    border-right-color: black;
+  }
+  50% {
+    border-right-color: transparent;
+  }
+  100% {
+    border-right-color: black;
+  }
+}
+
+#typewriter {
+  animation: blink 1s step-end infinite; /* 光标闪烁 */
+}
+
+.w {
+  width: 100%;
+  margin: auto;
+}
+
+.introduction {
+  background-color: #f9f7f7;
+  width: 100%;
+}
+
+#footer {
+  background-color: rgb(230, 228, 220);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#footer p {
+  margin: 5px 0;
+}
+
+#members {
+  text-align: center;
+}
+
+nav {
+  background-color: rgba(214, 214, 214, 0.626);
+  color: black;
+  height: 60px;
+  width: 100%; /* 让导航栏占据整个页面宽度 */
+  position: fixed; /* 让导航栏固定在页面顶部 */
+  top: 0; /* 将导航栏置于页面顶部 */
+  z-index: 1000; /* 确保导航栏显示在其他内容的上方 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 20px; */
+}
+
+.logo {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.nav-links li a:hover {
+  color: #ffffcc;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+}
+
+div p {
+  font-family: "KaiTi", "楷体", sans-serif;
+}
+
+/* .container {
+  max-width: 800px;
+  margin: 0 auto;
+} */
+
+.header {
+  background: url(images/背景2.jpg) right no-repeat;
+  opacity: 0.3;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 5px;
+}
+
+.btn-primary {
+  background-color: #9795f0;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+#docsy-info h2 {
+  color: #fff;
+  background-color: #b0c7e1;
+  padding: 10px;
+}
+
+#docsy-actions {
+  padding: 50px 0;
+}
+
+#docsy-actions .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#docsy-actions .action-item {
+  flex-basis: 30%;
+}
+
+#docsy-actions h3 {
+  color: #fff;
+}
+
+.center {
+  text-align: center;
+}
+
+.tight {
+  width: 200px;
+}
+
+.center1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+/* 定义外层容器样式 */
+.shell1 {
+  position: relative;
+  /* 相对定位 */
+  width: 60vw;
+  /* 宽度占视口宽度的60% */
+  height: 40vw;
+  /* 高度占视口高度的40% */
+  max-width: 380px;
+  /* 最大宽度为380像素 */
+  max-height: 250px;
+  /* 最大高度为250像素 */
+  margin: 0;
+  /* 外边距为0 */
+  color: white;
+  /* 字体颜色为白色 */
+  perspective: 1000px;
+  /* 透视效果，观察者与z=0平面的距离 */
+  transform-origin: center;
+  /* 变形原点为中心 */
+}
+
+/* 定义内容容器样式 */
+.content1 {
+  display: flex;
+  /* 设置为弹性盒子布局 */
+  justify-content: center;
+  /* 主轴居中对齐 */
+  align-items: center;
+  /* 交叉轴居中对齐 */
+  position: absolute;
+  /* 绝对定位 */
+  width: 100%;
+  /* 宽度100% */
+  height: 100%;
+  /* 高度100% */
+  transform-origin: center;
+  /* 变形原点为中心 */
+  transform-style: preserve-3d;
+  /* 保持3D变换 */
+  transform: translateZ(-30vw) rotateY(0);
+  /* 变换：沿z轴平移-30vw，绕y轴旋转0度 */
+  animation: carousel 9s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  /* 动画：名称为carousel，持续时间9秒，无限循环，缓动函数为cubic-bezier(0.77, 0, 0.175, 1)，动画结束后保持最后状态 */
+}
+
+/* 定义项目样式 */
+.item {
+  position: absolute;
+  /* 绝对定位 */
+  width: 60vw;
+  /* 宽度占视口宽度的60% */
+  height: 40vw;
+  /* 高度占视口高度的40% */
+  max-width: 380px;
+  /* 最大宽度为380像素 */
+  max-height: 250px;
+  /* 最大高度为250像素 */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  /* 设置阴影 */
+  border-radius: 6px;
+  /* 边框圆角半径为6像素 */
+  background-size: cover;
+  /* 背景图片等比例缩放并覆盖整个容器 */
+  /* -webkit-box-reflect: below 25px -webkit-linear-gradient(transparent 50%, rgba(255, 255, 255, 0.3)); */
+  /* 创建倒影效果 */
+}
+
+/* 第一个项目样式 */
+.item:nth-child(1) {
+  background-image: url(../images/项目1.png);
+  transform: rotateY(0) translateZ(35vw);
+  /* 变换：绕y轴旋转0度，沿z轴平移35vw */
+}
+
+/* 第二个项目样式 */
+.item:nth-child(2) {
+  background-image: url(../images/项目2.png);
+  transform: rotateY(120deg) translateZ(35vw);
+  /* 变换：绕y轴旋转120度，沿z轴平移35vw */
+}
+
+/* 第三个项目样式 */
+.item:nth-child(3) {
+  background-image: url(../images/项目3.png);
+  transform: rotateY(240deg) translateZ(35vw);
+  /* 变换：绕y轴旋转240度，沿z轴平移35vw */
+}
+
+/* 定义动画 */
+@keyframes carousel {
+  0%,
+  17.5% {
+    transform: translateZ(-35vw) rotateY(0);
+    /* 变换：沿z轴平移-35vw，绕y轴旋转0度 */
+  }
+
+  27.5%,
+  45% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+    /* 变换：沿z轴平移-35vw，绕y轴旋转-120度 */
+  }
+
+  55%,
+  72.5% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+    /* 变换：沿z轴平移-35vw，绕y轴旋转-240度 */
+  }
+
+  82.5%,
+  100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+    /* 变换：沿z轴平移-35vw，绕y轴旋转-360度 */
+  }
+}
+
+.shell {
+  position: relative;
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* 设置3d变化 */
+  transform-style: preserve-3d;
+  /* 添加透视效果 */
+  perspective: 900px;
+}
+
+.shell .box {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  transition: 0.3s;
+  overflow: hidden;
+  margin: 30px;
+  transform: rotateY(0deg);
+  transition-delay: 0.1s;
+  border-radius: 5px;
+  border: #fff 5px solid;
+}
+
+/* 当鼠标所有卡片的父元素点shell上时，
+        所有卡片像Y轴翻转20度 
+        .shell:hover .box {
+            transform: rotateY(20deg);
+        }*/
+
+/* 当鼠标悬浮在当前卡片上时，当前卡片的翻转角度为0，
+        并放大一点二五倍，加个阴影 */
+.shell .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.shell .box .images img {
+  width: 100%;
+}
+
+.shell .box .content {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  z-index: 999;
+  padding: 15px;
+}
+
+.shell .box .content h2 {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 20px;
+  transform: translateY(-100px);
+  text-align: left;
+}
+
+.shell .box:hover .content h2 {
+  transform: translateY(220px);
+  color: rgb(5, 5, 5);
+  transition: 0.3s;
+  background: linear-gradient(
+    to right,
+    rgb(214, 214, 214),
+    rgba(18, 46, 78, 0)
+  );
+  font-weight: bold;
+}
+
+#block {
+  height: 20%;
+}
+
+.shell .box .content p {
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+  font-size: 11px;
+  transform: translateY(600px);
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: left;
+}
+
+.shell .box:hover .content p {
+  transform: translateY(220px);
+  font-weight: bold;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+.team-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px;
+  background-color: rgba(197, 212, 218, 0.2);
+  border-radius: 50px;
+}
+
+.students-box {
+  padding: 20px;
+}
+
+.students-title {
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.students-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.students-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  overflow: hidden; /* 确保头像图片不超出圆形框 */
+}
+
+.students-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 确保图片填充圆形框 */
+}
+
+.students-bio {
+  background-color: rgba(149, 157, 161, 0.2);
+  border-radius: 50px;
+  padding: 10px;
+  padding-left: 20px;
+  text-align: left;
+  flex-grow: 1;
+  text-align: left;
+  width: 400px;
+}
+
+.teacher-box {
+  padding: 20px;
+}
+
+.teacher-title {
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.teacher-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.teacher-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  overflow: hidden; /* 确保头像图片不超出圆形框 */
+}
+
+.teacher-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 确保图片填充圆形框 */
+}
+
+.teacher-bio {
+  background-color: rgba(149, 157, 161, 0.2);
+  border-radius: 50px;
+  padding: 10px;
+  padding-left: 20px;
+  text-align: left;
+  flex-grow: 1;
+  text-align: left;
+  width: 400px;
+}
+
+/* 基础样式 */
+.teacher-photo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.teacher-photo img {
+  transition: transform 0.3s ease;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.students-card {
+  opacity: 0; /* 初始不显示 */
+  position: absolute;
+  top: -60px;
+  left: 60px; /* 调整卡片的位置 */
+  width: 300px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* 渐入渐出效果和轻微平移效果 */
+  transform: translateY(-10px); /* 初始位置稍微向上偏移 */
+}
+
+/* 卡片内的头像 */
+.students-card .card-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.students-card .card-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.students-card .card-bio {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* 鼠标移入头像时放大 */
+.students-photo-container:hover .students-photo img {
+  transform: scale(1.2); /* 放大效果 */
+}
+
+/* 鼠标移入头像时显示卡片 */
+.students-photo-container:hover .students-card {
+  opacity: 1; /* 显示卡片 */
+  transform: translateY(0); /* 回到原来的位置 */
+}
+
+.teacher-card {
+  opacity: 0; /* 初始不显示 */
+  position: absolute;
+  top: -60px;
+  left: 60px; /* 调整卡片的位置 */
+  width: 300px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* 渐入渐出效果和轻微平移效果 */
+  transform: translateY(-10px); /* 初始位置稍微向上偏移 */
+}
+
+/* 卡片内的头像 */
+.teacher-card .card-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.teacher-card .card-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.teacher-card .card-bio {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* 鼠标移入头像时放大 */
+.teacher-photo-container:hover .teacher-photo img {
+  transform: scale(1.2); /* 放大效果 */
+}
+
+/* 鼠标移入头像时显示卡片 */
+.teacher-photo-container:hover .teacher-card {
+  opacity: 1; /* 显示卡片 */
+  transform: translateY(0); /* 回到原来的位置 */
+}
+

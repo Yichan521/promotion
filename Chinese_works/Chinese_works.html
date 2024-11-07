@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>典耀中华</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <button onclick="showContactUs()">联系我们</button>
+      <button onclick="showChat()">使用机器人</button>
+    </div>
+    <div class="chat-container">
+      <div id="contact-us" class="content">
+        <h2>典耀中华</h2>
+        <p style="font-weight: bold">使用方法：</p>
+        <p>
+          典耀中华是一个语文古诗词科普教学机器人，可以作为语文老师的教学备课助手，也可以作为孩子们和边防战士们的古诗词伴学助手。
+        </p>
+        <p>
+          进入界面首先回答机器人用户的身份，然后输入你想了解的诗词，机器人就会根据不同的身份，提供量身定制的内容和风格各异的诗词配图。
+        </p>
+        <p>
+          无论是教育工作者、学生，还是驻守边疆的战士，典耀中华都能以最适合的方式，带你领略古诗词的魅力，感受传统文化的博大精深。
+        </p>
+        <span style="font-weight: bold">联系方式：</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">邮箱：</span>
+        <span>1421706189@qq.com</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">手机号：</span>
+        <span>19535688481</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">微信号：</span>
+        <span>13781323934</span>
+        <br />
+        <br />
+      </div>
+      <div id="chat" class="content hidden">
+        <div id="chat-output"></div>
+        <div class="input-container">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="输入信息..."
+            onkeypress="checkEnter(event)"
+          />
+          <button id="send-button" onclick="sendMessage()">发送</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

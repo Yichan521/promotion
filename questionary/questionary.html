@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>调查助手</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <button onclick="showContactUs()">联系我们</button>
+      <button onclick="showChat()">使用机器人</button>
+    </div>
+    <div class="chat-container">
+      <div id="contact-us" class="content">
+        <h2>调查助手</h2>
+        <p style="font-weight: bold">使用方法：</p>
+        <p>团队人员设计调查问卷的基础题目，题型包括单选、多选和简答</p>
+        <p>
+          bot会根据基础题目来提问用户，并且根据用户的回答进一步衍生新的相关问题
+        </p>
+        <p>
+          用户的答案会记录在数据库中，供推普人员随时查询统计，向bot询问可以得到数据库内数据，
+        </p>
+        <span style="font-weight: bold">联系方式：</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">邮箱：</span>
+        <span>1421706189@qq.com</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">手机号：</span>
+        <span>19535688481</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">微信号：</span>
+        <span>13781323934</span>
+        <br />
+        <br />
+      </div>
+      <div id="chat" class="content hidden">
+        <div id="chat-output"></div>
+        <div class="input-container">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="输入信息..."
+            onkeypress="checkEnter(event)"
+          />
+          <button id="send-button" onclick="sendMessage()">发送</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

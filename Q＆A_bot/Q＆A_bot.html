@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>发音知识助手</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <button onclick="showContactUs()">联系我们</button>
+      <button onclick="showChat()">使用机器人</button>
+    </div>
+    <div class="chat-container">
+      <div id="contact-us" class="content">
+        <h2>发音知识助手</h2>
+        <p style="font-weight: bold">使用方法：</p>
+        <p>
+          本bot的知识库包含中国传媒大学出版的《播音主持语音与发声》等书籍，回答问题均会标明所涉及知识的出处，旨在给推普工作者提供准确、严谨的播音领域知识。
+        </p>
+        <p>
+          推普工作者可以将自己在推普工作中遇到的问题提供给bot，bot会结合专业知识给予回答。
+        </p>
+        <p>例如，可以提问：8岁的孩子发音含糊，无法分清清辅音和浊辅音怎么办？</p>
+        <p>
+          同时，本bot也可以协助推普工作者进行方案策划，用户只需要将对象的年龄、遇到的发音问题、期望的解决时间给出，bot就可以给出对应的方案策略。推普工作者可以在原有基础上修改以更贴合实际。
+        </p>
+        <span style="font-weight: bold">联系方式：</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">邮箱：</span>
+        <span>1421706189@qq.com</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">手机号：</span>
+        <span>19535688481</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">微信号：</span>
+        <span>13781323934</span>
+        <br />
+        <br />
+      </div>
+      <div id="chat" class="content hidden">
+        <div id="chat-output"></div>
+        <div class="input-container">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="输入信息..."
+            onkeypress="checkEnter(event)"
+          />
+          <button id="send-button" onclick="sendMessage()">发送</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

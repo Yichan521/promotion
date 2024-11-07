@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: rgba(214, 214, 214, 0.735);
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  position: relative;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  background-color: #fff;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  margin-right: 10px;
+  background-color: #f0f0f0;
+}
+
+#send-button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#chat-output {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+#chat-output .message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #d0f0c0;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+}
+
+.message {
+  word-wrap: break-word;
+  white-space: pre-wrap; /* 保留空白字符和换行符 */
+  margin-bottom: 10px;
+}
+
+.user-message {
+  text-align: right;
+}
+
+.bot-message {
+  text-align: left;
+}

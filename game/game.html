@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>推普趣味游戏</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <button onclick="showContactUs()">联系我们</button>
+      <button onclick="showChat()">使用机器人</button>
+    </div>
+    <div class="chat-container">
+      <div id="contact-us" class="content">
+        <h2>推普趣味游戏</h2>
+        <p style="font-weight: bold">使用方法：</p>
+        <p>本bot包含三个功能，分别是：知识问答、成语接龙、发音飞花令。</p>
+        <span style="font-weight: bold">知识问答：</span>
+        <span
+          >用户选择知识问答后，bot会依据知识库的发音知识随机抽查提问用户，帮助用户巩固发音知识。</span
+        >
+        <br />
+        <br />
+        <span style="font-weight: bold">成语接龙：</span>
+        <span
+          >用户选择成语接龙后，bot会首先给出成语，用户可以回复与最后一个字同音字开头的成语，可以帮助被推普对象练习汉语拼音以及识字，同时激励他们进行成语记忆。</span
+        >
+        <br />
+        <br />
+        <span style="font-weight: bold">发音飞花令：</span>
+        <span
+          >用户选择发音飞花令后，bot会给出一个拼音，用户回答包含这个字的读音的诗句即算作正确，可以帮助被推普对象练习发音以及古诗文背诵。</span
+        >
+        <span style="font-weight: bold">联系方式：</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">邮箱：</span>
+        <span>1421706189@qq.com</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">手机号：</span>
+        <span>19535688481</span>
+        <br />
+        <br />
+        <span style="font-weight: bold">微信号：</span>
+        <span>13781323934</span>
+        <br />
+        <br />
+      </div>
+      <div id="chat" class="content hidden">
+        <div id="chat-output"></div>
+        <div class="input-container">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="输入信息..."
+            onkeypress="checkEnter(event)"
+          />
+          <button id="send-button" onclick="sendMessage()">发送</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
